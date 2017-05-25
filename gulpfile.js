@@ -10,8 +10,13 @@ gulp.task('es6', () => {
 		.pipe(gulp.dest('./public/js'));
 });
 
-gulp.tast('sass', () => {
+gulp.task('sass', () => {
 	return gulp.src('./assets/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./public/css'));
+});
+
+gulp.task('default', () => {
+	gulp.watch('./assets/js/*.js', ['es6']);
+	gulp.watch('./assets/sass/*.scss', ['sass']);
 });
