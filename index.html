@@ -3,13 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lista de tareas API</title>
+	<link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-	<input type="text" name="" id="new-task">
-	<ul id="task-list">
-		<li></li>
-	</ul>
+	<div class="content">
+		<input type="text" name="" id="new-task" class="input-task" placeholder="Agregar tarea">
+		<div class="card">
+			<ul id="task-list" class="list-style"></ul>
+		</div>
+	</div>
 
 	<script src="public/js/model.js"></script>
+	<script src="public/js/controller.js"></script>
+	<script src="public/js/view.js"></script>
 </body>
 </html>
