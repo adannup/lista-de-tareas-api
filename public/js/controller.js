@@ -25,7 +25,7 @@ function editTask() {
 
 	var _loop = function _loop(i) {
 		listItems[i].querySelector('span').addEventListener('blur', function () {
-			list.tasks[i].name = listItems[i].querySelector('span').textContent;
+			list.tasks[i].edit(listItems[i].querySelector('span').textContent);
 		});
 	};
 

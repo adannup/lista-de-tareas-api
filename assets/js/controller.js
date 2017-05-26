@@ -18,7 +18,7 @@ function editTask(list = inbox){
 	var listItems = taskList.children;
 	for( let i = 0; i < listItems.length; i++){
 		listItems[i].querySelector('span').addEventListener('blur', () => {
-			list.tasks[i].name = listItems[i].querySelector('span').textContent;
+			list.tasks[i].edit(listItems[i].querySelector('span').textContent);
 		});
 	}
 }
@@ -35,5 +35,6 @@ function completeTask(list = inbox){
 		});
 	}
 }
+
 
 newTaskElement.addEventListener('keyup', addTask);
