@@ -12,9 +12,6 @@ class Task {
 		this.isComplete = true;
 	}
 
-	remove(){
-		//Eliminar la tarea
-	}
 }
 
 class List {
@@ -25,6 +22,11 @@ class List {
 
 	addTask(task){
 		this.tasks.push(task);
+	}
+
+	removeTask(i){
+		//Eliminar la tarea
+		this.tasks.splice(i, 1);
 	}
 }
 

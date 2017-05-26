@@ -36,5 +36,18 @@ function completeTask(list = inbox){
 	}
 }
 
+function removeTask(list = inbox){
+	var listItems = taskList.children;
+	for( let i = 0; i < listItems.length; i++){
+		listItems[i].querySelector('button').addEventListener('click', function(e){
+			e.preventDefault();
+			var _i = i;
+			list.removeTask(_i);
+			this.parentElement.remove();
+			console.table(list.tasks);
+			completeTask();
+		});
+	}
+}
 
 newTaskElement.addEventListener('keyup', addTask);

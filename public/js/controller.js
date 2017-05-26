@@ -54,4 +54,25 @@ function completeTask() {
 	}
 }
 
+function removeTask() {
+	var list = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : inbox;
+
+	var listItems = taskList.children;
+
+	var _loop3 = function _loop3(i) {
+		listItems[i].querySelector('button').addEventListener('click', function (e) {
+			e.preventDefault();
+			var _i = i;
+			list.removeTask(_i);
+			this.parentElement.remove();
+			console.table(list.tasks);
+			completeTask();
+		});
+	};
+
+	for (var i = 0; i < listItems.length; i++) {
+		_loop3(i);
+	}
+}
+
 newTaskElement.addEventListener('keyup', addTask);

@@ -21,4 +21,5 @@ function printTask(name){
 
 	editTask();
 	completeTask();
+	removeTask();
 }

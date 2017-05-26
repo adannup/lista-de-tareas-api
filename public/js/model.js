@@ -22,11 +22,6 @@ var Task = function () {
 		value: function complete() {
 			this.isComplete = true;
 		}
-	}, {
-		key: "remove",
-		value: function remove() {
-			//Eliminar la tarea
-		}
 	}]);
 
 	return Task;
@@ -44,6 +39,12 @@ var List = function () {
 		key: "addTask",
 		value: function addTask(task) {
 			this.tasks.push(task);
+		}
+	}, {
+		key: "removeTask",
+		value: function removeTask(i) {
+			//Eliminar la tarea
+			this.tasks.splice(i, 1);
 		}
 	}]);
 
