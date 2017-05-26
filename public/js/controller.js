@@ -42,7 +42,7 @@ function completeTask() {
 	var _loop2 = function _loop2(i) {
 		listItems[i].querySelector('input').addEventListener('change', function () {
 			if (listItems[i].querySelector('input').checked) {
-				list.tasks[i].isComplete = true;
+				list.tasks[i].complete();
 				listItems[i].classList.add('complete');
 			}
 			console.table(list.tasks);

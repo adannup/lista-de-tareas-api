@@ -28,7 +28,7 @@ function completeTask(list = inbox){
 	for( let i = 0; i < listItems.length; i++){
 		listItems[i].querySelector('input').addEventListener('change', () => {
 			if(listItems[i].querySelector('input').checked){
-				list.tasks[i].isComplete = true;
+				list.tasks[i].complete();
 				listItems[i].classList.add('complete');
 			}
 			console.table(list.tasks);
