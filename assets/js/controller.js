@@ -19,6 +19,18 @@ function editTask(list = inbox){
 	for( let i = 0; i < listItems.length; i++){
 		listItems[i].querySelector('span').addEventListener('blur', () => {
 			list.tasks[i].name = listItems[i].querySelector('span').textContent;
+		});
+	}
+}
+
+function completeTask(list = inbox){
+	var listItems = taskList.children;
+	for( let i = 0; i < listItems.length; i++){
+		listItems[i].querySelector('input').addEventListener('change', () => {
+			if(listItems[i].querySelector('input').checked){
+				list.tasks[i].isComplete = true;
+				listItems[i].classList.add('complete');
+			}
 			console.table(list.tasks);
 		});
 	}

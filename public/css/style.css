@@ -63,3 +63,8 @@ button {
   right: 10px; }
   .btn-remove:hover {
     background-color: #FF1744; }
+
+.complete {
+  background-color: #FFEBEE; }
+  .complete input {
+    display: none; }
